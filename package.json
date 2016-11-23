@@ -1,0 +1,52 @@
+{
+  "name": "ukulele",
+  "version": "1.0.0",
+  "description": "Slack bot for exams",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist && npm run build-bot",
+    "build-bot": "browserify src/index.js --standalone Bot -o dist/index.js --node -t [ babelify --presets [ es2015 ] --plugins [ transform-decorators-legacy transform-class-properties ] ]",
+    "dev": "node bin/ukulele.js",
+    "start": "forever start -w bin/ukulele.js -- --slackbot",
+    "logs": "forever logs bin/ukulele.js",
+    "stop": "forever stop bin/ukulele.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackYourFuture/hackyourexams.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackYourFuture/hackyourexams/issues"
+  },
+  "homepage": "https://github.com/HackYourFuture/hackyourexams#readme",
+  "dependencies": {
+    "@slack/client": "^3.6.1",
+    "body-parser": "^1.15.2",
+    "botkit": "^0.4.1",
+    "botkit-shell": "^0.1.4",
+    "express": "^4.14.0",
+    "firebase": "^3.6.0",
+    "firebase-admin": "^4.0.1",
+    "inquirer": "^1.2.3",
+    "ngrok": "^2.2.3",
+    "octonode": "^0.7.6",
+    "slackbots": "^0.5.3",
+    "vorpal": "^1.11.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "bufferutil": "^1.2.1",
+    "forever": "^0.15.3",
+    "thread-sleep": "^1.0.4",
+    "try-thread-sleep": "^1.0.0",
+    "utf-8-validate": "^1.2.1"
+  }
+}
