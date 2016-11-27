@@ -2,7 +2,7 @@
   "name": "ukulele",
   "version": "1.0.0",
   "description": "Slack bot for exams",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "mkdir -p dist && npm run build-bot",
     "build-bot": "browserify src/index.js --standalone Bot -o dist/index.js --node -t [ babelify --presets [ es2015 ] --plugins [ transform-decorators-legacy transform-class-properties ] ]",
