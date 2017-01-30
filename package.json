@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/HackYourFuture/hackyourexams#readme",
   "dependencies": {
-    "slack/client": "git+ssh://git@github.com/slackapi/node-slack-sdk.git",
+    "@slack/client": "^3.6.1",
     "body-parser": "^1.15.2",
     "botkit": "^0.4.1",
     "botkit-shell": "^0.1.4",
